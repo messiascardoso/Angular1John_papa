@@ -1,0 +1,34 @@
+{
+  "name": "angular1john_papa",
+  "version": "1.0.0",
+  "description": "Boas praticas john papa",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/messiascardoso/Angular1John_papa.git"
+  },
+  "author": "Messias Cardoso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/messiascardoso/Angular1John_papa/issues"
+  },
+  "homepage": "https://github.com/messiascardoso/Angular1John_papa#readme",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-serve": "^1.4.0",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  }
+}
