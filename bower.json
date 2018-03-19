@@ -1,0 +1,23 @@
+{
+  "name": "angular1john_papa",
+  "description": "Boas praticas john papa",
+  "main": "index.html",
+  "authors": [
+    "Messias Cardoso"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/messiascardoso/Angular1John_papa",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.9",
+    "bootstrap": "4.0.0"
+  }
+}
