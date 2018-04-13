@@ -16,18 +16,20 @@
          *  em ordem alfabética, e não espalhados através do código do controller.
          */
         vm.addContato = addContato;
-        vm.contatos = [
-                        {nome:'Joao da Silva', tel:'119988-4545'},
-                        {nome:'Zeca pacodinho', tel:'119988-6098'},
-                        {nome:'Maria fonseca', tel:'115588-6077'},
-                        {nome:'Marcos antonio', tel:'116688-6098'}
-                      ];
+				vm.contatos = []; 
         
-        console.log(vm);
+				vm.operadoras = 
+				[
+					{nome:'OI', codigo:14 , categoria: 'Celular'},
+					{nome:'Vivo', codigo:15, categoria: 'Celular'},
+					{nome:'Tim', codigo:41 , categoria: 'Celular'},
+					{nome:'GvT', codigo:18, categoria: 'Fixo'},
+					{nome:'Embratel', codigo:41 , categoria: 'Fixo'}
+        ];
 
         activate();
 
-        ////////////////
+      
 
         function activate() { 
             
@@ -37,5 +39,6 @@
             vm.contatos.push(angular.copy(contato));
         }
 
+       
     }
 })();

@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="listaTefonica">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body ng-controller="listaController as vm">
-        <div class="d-flex justify-content-center pt-4">
-            <div class="p-2 jumbotron text-center">
-                <table class="table table-striped">
-                    <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Telefone</th>
-                    </tr>
-                    <tr ng-repeat="contato in vm.contatos">
-                        <td>{{contato.nome}}</td>
-                        <td>{{contato.tel}}</td>
-                    </tr>
-                </table>
-                <hr>
-                <input type="text" name="" id="" class="form-control" ng-model="contato.nome">
-                <input type="text" name="" id="" class="form-control" ng-model="contato.tel">
-                <button ng-click="vm.addContato(contato)" class="btn btn-primary btn-block">Adiciona Contato</button>
-            </div>
-    </div>
+<body ng-controller="listaController as lista">
+	<div class="d-flex justify-content-center pt-4">
+		<div class="p-2 jumbotron text-center">
+			<table class="table table-striped">
+				<tr>
+					<th scope="col">&nbsp;</th>
+					<th scope="col">Nome</th>
+					<th scope="col">Telefone</th>
+					<th scope="col">Operadora</th>
+					
+				</tr>
+				<tr ng-repeat="contato in lista.contatos" class="">
+					<td>
+						<input class="custom-checkbox" 
+						id="customCheck1" 
+						name="" 
+						ng-model="lista.contatos" 
+						type="checkbox">
+					</td>
+					<td>{{lista.contato.nome}}</td>
+					<td>{{lista.contato.tel}}</td>
+					<td>{{lista.contato.operadora.nome}}</td>
+				</tr>
 
-   <script src="bower_components/angular/angular.min.js"></script>
-   <script src="js/main.js"></script>
-   <script src="js/controllers/lista-controller.js"></script>
+			</table>
+			<hr>
+			<input type="text" name="" id="" class="form-control" ng-model="lista.contato.nome">
+			<input type="text" name="" id="" class="form-control" ng-model="lista.contato.tel">
+			<select
+				class="form-control" 
+				name="operadora" 
+				id="operadora" 
+				ng-model="lista.contato.operadora" 
+				ng-options="operadora.nome group by operadora.categoria for operadora in lista.operadoras">
+				<option value="">Selecione uma opção</option>
+			</select>
+			<!-- ng-options="operadora.codigo as operadora.nome for operadora in lista.operadoras"> -->
+			<button ng-click="lista.addContato(contato)" class="btn btn-primary btn-block">Adiciona Contato</button>
+			{{lista.contato}}
+		
+		</div>
+	</div>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/controllers/lista-controller.js"></script>
 </body>
+
 </html>
